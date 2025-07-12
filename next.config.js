@@ -1,15 +1,15 @@
+// next.config.js
+import { withNetlify } from '@netlify/next';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
   experimental: {
     serverActions: {
       allowedOrigins: ['*'],
     },
   },
-  // Enable static exports for deployment
   output: 'standalone',
-  // Custom webpack config for server-side compatibility
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
@@ -23,4 +23,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNetlify(nextConfig);
