@@ -1,0 +1,71 @@
+Frontend Assessment Analysis: Teacher Management Interface Redesign
+====================================================================
+
+🔍 UI/UX Analysis: Existing Design (from Provided Screenshot)
+--------------------------------------------------------------
+
+!!!important - USE NEXT.JS + TYPESCRIPT
+
+
+1. Header & Navigation
+----------------------
+- Top Navigation Bar:
+  - Location dropdown (e.g., "Richmond Hill")
+  - User controls (profile/settings/logout)
+- Sidebar Navigation:
+  - Vertical layout with various modules
+  - Not collapsible – takes up space on small screens
+
+2. Main Teacher Profile Panel
+-----------------------------
+- Teacher Info:
+  - Name: Alynia Allan
+  - Role: Teacher
+  - Email, Phone, Address (on right-hand side)
+- Qualifications:
+  - Private Qualifications listed with rates
+  - Group Qualifications section empty
+- Editable Sections:
+  - Icons to edit/add details
+
+3. Schedule Section (Bottom)
+----------------------------
+- Tabs: Availability, Unavailabilities, Students, etc.
+- Weekly Time Grid:
+  - Time: 7:30am–10pm, Mon to Sun
+  - Green blocks indicate scheduled lessons
+
+
+
+✅ Task Plan to Modernize UI (As per Instructions)
+-------------------------------------------------
+
+1. Tech Stack Setup
+-------------------
+- Next.js (App Router) + TypeScript
+- Tailwind CSS
+- Supporting Libraries:
+  - react-hook-form (form handling)
+  - @headlessui/react or radix-ui (UI components)
+  - clsx/classnames (conditional classes)
+  - zustand/context API (state management if needed)
+
+2. Component Breakdown
+----------------------
+- Sidebar.tsx – Navigation drawer (collapsible)
+- Header.tsx – Top bar with user/location
+- TeacherDetailsCard.tsx – Info card for personal details
+- QualificationsCard.tsx – Private & Group rates (editable)
+- ScheduleGrid.tsx – Week-view grid of lesson slots
+- Tabs.tsx – Navigation tabs using Headless UI
+
+3. Features to Include
+----------------------
+- Responsive layout (mobile-first)
+- Editable cards (modals or inline editing)
+- Form validation with Zod/Yup
+- Accessible forms, ARIA tags, focus traps
+- Clickable/interactable time blocks in the schedule
+- Light/dark theme support (optional)
+- Smooth transitions and hover animations
+

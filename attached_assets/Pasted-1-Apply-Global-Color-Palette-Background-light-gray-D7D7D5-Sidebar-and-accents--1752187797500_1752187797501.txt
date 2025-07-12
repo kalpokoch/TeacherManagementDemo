@@ -1,0 +1,39 @@
+1. 🎨 Apply Global Color Palette:
+   - Background: light gray (#D7D7D5).
+   - Sidebar and accents: dark charcoal (#2F2F30).
+   - Primary card backgrounds: off-white (#FDFEFD).
+   - Border lines and subtle dividers: soft gray (#B3B8B0).
+   - Text, icons, and highlight elements: muted green-gray (#607267).
+
+2. 🧩 Sidebar (Desktop & Mobile):
+   - Keep full-height sidebar on desktop; bottom navigation on mobile.
+   - Use dark charcoal background (#2F2F30) with white or light text/icons.
+   - Apply large rounded corners on the right edge only (top-right & bottom-right).
+
+3. 🧰 Populate the Four Cards:
+   - **Upcoming Lessons**: Heading + list of 3 lessons with date/time and calendar icon.
+   - **Class Performance Summary**: Heading + “Average Grade This Month,” display percentage (e.g., “95%”), “+7% from last month,” and a mini bar chart.
+   - **Quick Actions**: Buttons “Add Assignment”, “Message Students”, “Upload Resources” – pill-shaped.
+   - **Create Class**: Heading “Create New Class” and prominent rounded CTA “+ Create Class”.
+
+4. 🧲 Card Styling:
+   - Card panel background: off-white (#FDFEFD).
+   - Corners: 16 px rounding.
+   - Shadows: light gray (#B3B8B0) tinted for softness.
+   - Minimum height for visual rhythm.
+
+5. ✨ Hover Effects & Animation:
+   - Cards gently scale (~1.02x) and deepen shadow on hover.
+   - Buttons darken softly on hover for smooth feedback (~200–300ms transitions).
+
+6. 📐 Layout & Responsiveness:
+   - Use responsive grid: stack on mobile, align in rows on desktop.
+   - Maintain 8‑point spacing (margins, paddings, and gutters).
+   - Ensure greeting header (“Hello, Sarah! …”) remains visible on mobile too.
+
+7. ✅ Final Review:
+   - Confirm the entire screen uses #D7D7D5 as background.
+   - Verify sidebar uses #2F2F30 and cards use #FDFEFD.
+   - Check rounded right edge on sidebar.
+   - Ensure hover animations are smooth and subtle.
+   - Test mobile view: bottom nav in mobile, header visible, spacing correct.
