@@ -10,8 +10,9 @@ export interface Teacher {
   projects: number;
   followers: number;
   following: number;
-  createdAt: string;
-  updatedAt: string;
+  balance: string | null;
+  createdAt: Date | null;
+  updatedAt: Date | null;
 }
 
 export interface InsertTeacher {
@@ -35,8 +36,8 @@ export interface Transfer {
   percentage: string;
   timestamp: string;
   type: 'from' | 'to';
-  createdAt: string;
-  updatedAt: string;
+  createdAt: Date | null;
+  updatedAt: Date | null;
 }
 
 export interface InsertTransfer {
@@ -50,12 +51,11 @@ export interface InsertTransfer {
 
 export interface Activity {
   id: number;
-  teacherId: number;
   value: string;
-  createdAt: string;
-  updatedAt: string;
+  teacherId: number | null;
+  createdAt: Date | null;
+  date: Date; // ✅ Add this if it makes sense
 }
-
 export interface InsertActivity {
   teacherId: number;
   value: string;

@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export function Sidebar() {
   return (
-    <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 w-16 h-[20vh] rounded-3xl bg-white shadow-lg flex flex-col items-center justify-between py-6">
+    <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 w-16 h-[60vh] rounded-3xl bg-white shadow-lg flex flex-col items-center justify-between py-6">
 
       {/* Navigation */}
       <nav className="flex flex-col items-center space-y-4 mt-2">

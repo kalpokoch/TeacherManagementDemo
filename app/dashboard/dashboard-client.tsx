@@ -23,12 +23,19 @@ export function DashboardClient() {
   const { data: teacher, isLoading: teacherLoading } = useQuery<Teacher>({
     queryKey: ["/api/teacher"],
     queryFn: async () => {
-      const response = await fetch("/api/teacher")
-      if (!response.ok) throw new Error("Failed to fetch teacher")
-      return response.json()
-    },
-  })
+      const res = await fetch("/api/teacher");
+      if (!res.ok) throw new Error("Failed to fetch teacher");
 
+       return res.json();
+
+      // Convert date strings to Date objects
+      // return {
+      //   ...data,
+      //   createdAt: data.createdAt ? new Date(data.createdAt) : null,
+      //   updatedAt: data.updatedAt ? new Date(data.updatedAt) : null
+      // };
+    }
+  });
   const { data: transfers, isLoading: transfersLoading } = useQuery<Transfer[]>({
     queryKey: ["/api/teacher", 1, "transfers"],
     queryFn: async () => {
