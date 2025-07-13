@@ -3,11 +3,10 @@ import { storage } from '@/lib/storage';
 
 export async function GET(
   req: NextRequest,
-  context: { params: { id: string } }
+  { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = await context.params;
-    const teacherId = parseInt(id);
+    const teacherId = parseInt(params.id);
     const teacher = await storage.getTeacher(teacherId);
 
     if (!teacher) {
