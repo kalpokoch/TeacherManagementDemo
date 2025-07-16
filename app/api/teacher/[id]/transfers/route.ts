@@ -1,12 +1,13 @@
+// app/api/teacher/[id]/transfers/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { storage } from '@/lib/storage';
 
 export async function GET(
   req: NextRequest,
-  context: { params: Promise<{ id: string }> } // 👈 params might be a Promise
+  context: { params: { id: string } } // ✅ Fixed: params is not a Promise
 ) {
   try {
-    const { id } = await context.params; // 👈 await here
+    const { id } = context.params; // ✅ No need to await
     const teacherId = parseInt(id);
     const transfers = await storage.getTransfersByTeacher(teacherId);
     return NextResponse.json(transfers);
