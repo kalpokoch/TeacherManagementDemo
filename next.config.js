@@ -1,3 +1,6 @@
+// next.config.js
+import path from 'path';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -7,9 +10,9 @@ const nextConfig = {
       allowedOrigins: ['*'],
     },
   },
-  // Enable static exports for deployment
+
   output: 'standalone',
-  // Custom webpack config for server-side compatibility
+
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
@@ -19,6 +22,10 @@ const nextConfig = {
         tls: false,
       };
     }
+
+    // ✅ Add alias support for "@"
+    config.resolve.alias['@'] = path.resolve(__dirname);
+
     return config;
   },
 };

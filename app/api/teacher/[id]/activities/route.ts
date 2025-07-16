@@ -1,14 +1,15 @@
-// app/api/teacher/[id]/activities/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { storage } from '@/lib/storage';
+import { RouteContextWithId } from '@/types/api';
 
 export async function GET(
   req: NextRequest,
-  context: { params: { id: string } } // ✅ Fixed: params is not a Promise
+  context: RouteContextWithId
 ) {
+  const { id } = context.params;
+  const teacherId = parseInt(id);
+
   try {
-    const { id } = context.params; // ✅ No need to await
-    const teacherId = parseInt(id);
     const activities = await storage.getActivitiesByTeacher(teacherId);
     return NextResponse.json(activities);
   } catch (error) {

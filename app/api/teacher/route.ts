@@ -1,3 +1,4 @@
+// app\api\teacher\route.ts
 import { NextRequest, NextResponse } from 'next/server'
 import { storage } from '@/lib/storage'
 
