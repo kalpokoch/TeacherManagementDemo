@@ -1,7 +1,7 @@
 // types/api.ts
 
 export type RouteContextWithId = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };

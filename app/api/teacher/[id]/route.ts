@@ -6,7 +6,7 @@ export async function GET(
   req: NextRequest,
   context: RouteContextWithId
 ) {
-  const { id } = context.params;
+  const { id } = await context.params;
   const teacherId = parseInt(id);
 
   try {

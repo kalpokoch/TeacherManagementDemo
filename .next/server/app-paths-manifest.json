@@ -1,0 +1,6 @@
+{
+  "/api/teacher/[id]/transfers/route": "app/api/teacher/[id]/transfers/route.js",
+  "/api/teacher/route": "app/api/teacher/route.js",
+  "/api/teacher/[id]/activities/route": "app/api/teacher/[id]/activities/route.js",
+  "/dashboard/page": "app/dashboard/page.js"
+}
