@@ -10,7 +10,7 @@ export interface Teacher {
   projects: number;
   followers: number;
   following: number;
-  balance: string | null;
+  balance: number | null;
   createdAt: Date | null;
   updatedAt: Date | null;
 }

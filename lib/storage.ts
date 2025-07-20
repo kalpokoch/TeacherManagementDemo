@@ -46,11 +46,12 @@ export class MemStorage implements IStorage {
       avatar: null,
       earnings: "5,250",
       activityAmount: "2,100",
+      balance: 3150,
       projects: 12,
       followers: 1234,
       following: 567,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
     this.teachers.set(1, teacher);
 
@@ -64,8 +65,8 @@ export class MemStorage implements IStorage {
         percentage: "85",
         timestamp: "2 hours ago",
         type: "from",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         id: 2,
@@ -75,8 +76,8 @@ export class MemStorage implements IStorage {
         percentage: "15",
         timestamp: "5 hours ago",
         type: "to",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         id: 3,
@@ -86,8 +87,8 @@ export class MemStorage implements IStorage {
         percentage: "65",
         timestamp: "1 day ago",
         type: "from",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ];
     transfers.forEach(transfer => this.transfers.set(transfer.id, transfer));
@@ -99,43 +100,43 @@ export class MemStorage implements IStorage {
         id: 1,
         teacherId: 1,
         value: "20.50",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         id: 2,
         teacherId: 1,
         value: "35.25",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         id: 3,
         teacherId: 1,
         value: "28.75",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         id: 4,
         teacherId: 1,
         value: "42.00",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         id: 5,
         teacherId: 1,
         value: "18.50",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         id: 6,
         teacherId: 1,
         value: "31.25",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ];
     activities.forEach(activity => this.activities.set(activity.id, activity));
@@ -159,8 +160,8 @@ export class MemStorage implements IStorage {
     const teacher: Teacher = {
       id: this.currentTeacherId++,
       ...insertTeacher,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
     this.teachers.set(teacher.id, teacher);
     return teacher;
@@ -174,7 +175,7 @@ export class MemStorage implements IStorage {
     const updatedTeacher: Teacher = {
       ...teacher,
       ...updateData,
-      updatedAt: new Date().toISOString(),
+      updatedAt: new Date(),
     };
     this.teachers.set(id, updatedTeacher);
     return updatedTeacher;
@@ -192,8 +193,8 @@ export class MemStorage implements IStorage {
     const transfer: Transfer = {
       id: this.currentTransferId++,
       ...insertTransfer,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
     this.transfers.set(transfer.id, transfer);
     return transfer;
@@ -207,8 +208,8 @@ export class MemStorage implements IStorage {
     const activity: Activity = {
       id: this.currentActivityId++,
       ...insertActivity,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
     this.activities.set(activity.id, activity);
     return activity;
